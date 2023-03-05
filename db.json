@@ -1,11 +1,43 @@
 {
-  "cart": [
-    {
-      "id": 1,
-      "name": "Mobile"
+    "cart": [
+        {
+            "id": 1,
+            "name": "OnePlus 11R 5G (Galactic Silver, 8GB RAM, 128GB Storage)",
+            "price": 39999,
+            "image":"https://m.media-amazon.com/images/I/613SAOPmLeL._SX679_.jpg"
+        },
+        {
+            "id": 2,
+            "name": "Samsung Galaxy S23 Ultra 5G (Green, 12GB, 512GB Storage)",
+            "price": 134999,
+            "image":"https://m.media-amazon.com/images/I/61VfL-aiToL._SX679_.jpg"
+        },
+        {
+            "id": 3,
+            "name": "OnePlus 10T 5G (Moonstone Black, 16GB RAM, 256GB Storage)",
+            "price": 55999,
+            "image":"https://m.media-amazon.com/images/I/71XKAnxCsLL._SX679_.jpg"
+        },
+        {
+            "id": 4,
+            "name": "Apple iPhone 14 Pro 128GB Space Black",
+            "price": 122999,
+            "image":"https://m.media-amazon.com/images/I/61XO4bORHUL._SL1500_.jpg"
+        },
+        {
+            "id": 5,
+            "name": "Xiaomi 12 Pro | 5G (Opera Muave, 8GB RAM, 256GB Storage)",
+            "price": 52999,
+            "image":"https://m.media-amazon.com/images/I/71lYm08fIZL._SX679_.jpg"
+        },
+        {
+            "id": 6,
+            "name": "iQOO 11 5G (Legend, 8GB RAM, 256 GB Storage)",
+            "price": 59990,
+            "image":"https://m.media-amazon.com/images/I/71ZeuCAbcSL._SX679_.jpg"
+        }
+    ],
+    "profile": {
+        "name": "typicode"
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
 }
