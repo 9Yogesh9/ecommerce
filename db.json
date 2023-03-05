@@ -1,0 +1,14 @@
+{
+    "cart":[
+        {
+            "id":1,
+            "name":"Mobile",
+            "price": 89999
+        },
+        {
+            "id":2,
+            "name":"Laptop",
+            "price": 819999           
+        }
+    ]
+}
