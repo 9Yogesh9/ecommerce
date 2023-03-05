@@ -10,5 +10,9 @@
             "name":"Laptop",
             "price": 819999           
         }
-    ]
+    ],
+  "profile": {
+    "name": "typicode"
+  }
+    
 }
