@@ -31,11 +31,46 @@ export const productSlice = createSlice({
     initialState,
 
     reducers: {
-        addProducts: (state) => {
+        addProducts: (state, action) => {
+            const mod_state = [...state];
+            mod_state.push(action.payload);
+            state.value = mod_state;
+        },
+
+        removeProducts: (state, action) => {
+            const mod_state = [...state];
+            const products = mod_state.filter((item) => item.id !== action.payload.id);
+            state.value = products;
+        },
+
+        addQuantity: (state, action) => {
+            const mod_state = [...state];
+            const products = mod_state.map((item) => {
+                if (item.id === action.payload.id) {
+                    item.quantity++;
+                }
+                return item;
+            });
+            state.value = products
 
         },
+
+        subtractQuantity: (state, action) => {
+            const mod_state = [...state];
+            const products = mod_state.map((item) => {
+                if (item.id === action.payload.id) {
+                    if (item.quantity - 1 >= 0)
+                        item.quantity--;
+                }
+                return item;
+            });
+            state.value = products
+
+        },
+
         getFromLocal: (state) => {
-            state.value = JSON.parse(localStorage.ecommerce).products
+            // state.value = JSON.parse(localStorage.ecommerce).products;
+            state.value = localStorage.ecommerce ? JSON.parse(localStorage.ecommerce).products : {};
             // console.log("Loaded Offline ");
             // console.log(state.value);
         }
@@ -53,7 +88,13 @@ export const productSlice = createSlice({
     }
 });
 
-export const { addProducts, getFromLocal } = productSlice.actions;
+export const {
+    addProducts,
+    getFromLocal,
+    removeProducts,
+    addQuantity,
+    subtractQuantity,
+} = productSlice.actions;
 export const selectProduct = (state) => state.product.value;
 
 export default productSlice.reducer;
