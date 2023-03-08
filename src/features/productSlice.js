@@ -44,26 +44,37 @@ export const productSlice = createSlice({
         },
 
         addQuantity: (state, action) => {
-            const mod_state = [...state];
+            const mod_state = [...state.value];
             const products = mod_state.map((item) => {
                 if (item.id === action.payload.id) {
-                    item.quantity++;
+                    item.stock++;
                 }
                 return item;
             });
-            state.value = products
 
+            const ecom = { products: [...products] };
+            localStorage.setItem('ecommerce', JSON.stringify(ecom));
+
+            state.value = products;
         },
 
         subtractQuantity: (state, action) => {
-            const mod_state = [...state];
+            const mod_state = [...state.value];
+            // console.log(action.payload);
+            // const pos = mod_state.map(e => e.id).indexOf(action.payload.id);
+            // console.log("Index " + pos);
+
             const products = mod_state.map((item) => {
                 if (item.id === action.payload.id) {
-                    if (item.quantity - 1 >= 0)
-                        item.quantity--;
+                    if (item.stock - 1 >= 0)
+                        item.stock--;
                 }
                 return item;
             });
+
+            const ecom = { products: [...products] };
+            localStorage.setItem('ecommerce', JSON.stringify(ecom));
+
             state.value = products
 
         },
@@ -89,8 +100,8 @@ export const productSlice = createSlice({
 });
 
 export const {
-    addProducts,
     getFromLocal,
+    addProducts,
     removeProducts,
     addQuantity,
     subtractQuantity,

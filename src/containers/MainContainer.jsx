@@ -19,6 +19,6 @@ export default MainContainer;
 const full_screen = {
     width: '100vw', 
     height: '100vh', 
-    backgroundColor: 'black', 
-    color: 'white'
+    // backgroundColor: 'black', 
+    // color: 'white'
 }

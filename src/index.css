@@ -9,7 +9,9 @@
     justify-content: space-around;
     align-items: center;
     padding: 5px;
-    height: 6vh
+    height: 6vh;
+    background-color: black;
+    color: white;
 }
 
 .left_control {
@@ -27,7 +29,7 @@
 
 .footer_position {
     position: absolute;
-    bottom: 2px;
+    bottom: 0px;
     width: 100%
 }
 
@@ -36,6 +38,23 @@
     height: 88vh;
     /* background-color: #6d336d; */
     justify-content: center
+}
+
+.add_new_item{
+    color: white;
+    position: absolute;
+    right: 4px;
+    top: 3px;
+    width: 5rem;
+}
+
+.add_new_item button{
+    width: 100%;
+    height: 100%;
+    font-weight: bolder;
+    background-image: linear-gradient(271deg, #ff0505, #f4ff00);
+    border-radius: 5px;
+    padding: 3px;
 }
 
 .sub_container {
@@ -55,7 +74,7 @@
 .cart_item {
     height: 200px;
     width: 70rem;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -64,16 +83,9 @@
     /* background-color: #7d427d */
 }
 
-.item_name {
-    width: 10%;
-}
-
-.item_stock {
-    width: 30%;
-}
 
 .item_image_container {
-    width: 30%;
+    width: 15rem;
     height: 90%;
 }
 
@@ -81,4 +93,53 @@
     width: 100%;
     height: 100%;
     object-fit: contain;
+}
+
+.name_stock {
+    width: 40rem;
+    height: 8rem;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    justify-content: space-between;
+}
+
+.item_name {
+    font-family: 'Tilt Warp', cursive;
+    width: 35rem;
+    height: 3rem;
+    font-size: 16pt;
+    margin-bottom: 1rem;
+}
+
+.item_data {
+    width: 30rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.item_stock {
+    font-family: 'Tilt Warp', cursive;
+    padding: 5px;
+}
+
+.item_price {
+    font-family: 'Tilt Warp', cursive;
+    padding: 5px;
+}
+
+.add_to_cart {
+    width: 7rem;
+}
+
+.add_to_cart_btn {
+    padding: 5px;
+    height: 3rem;
+    width: 100%;
+    background-image: linear-gradient(166deg, #e7f42a, #ffbf22);
+    border-radius: 16px;
+    font-size: 12pt;
+    font-weight: bolder;
+    cursor: pointer;
 }

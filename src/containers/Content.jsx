@@ -39,6 +39,9 @@ const Content = () => {
     // "https://my-json-server.typicode.com/9Yogesh9/ecommerce/cart" to get the list of items
     return (
         <div className="content_container">
+            <div className="add_new_item">
+                <button>ADD PRODUCT</button>
+            </div>
             <div className="sub_container">
                 <div className="cart_container">
                     {loading ? <Vortex /> : products.map((item => <CartItems item={item} key={item.id} />))}
