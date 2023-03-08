@@ -1,28 +1,47 @@
-import React, { useEffect } from "react";
-import CartItems from "../components/CartItems";
+import React, { useEffect, useState } from "react";
+import { Vortex } from 'react-loader-spinner';
+import { useDispatch, useSelector } from "react-redux";
 
+import {
+    addProduct,
+    getFromLocal,
+    fetchProductsAsync,
+    selectProduct
+} from '../features/productSlice';
+
+import {
+    loadingFalse,
+    loadingTrue,
+    selectLoading
+} from '../features/loadingSlice';
+
+import CartItems from "../components/CartItems";
 import '../index.css';
 
 const Content = () => {
+    const products = useSelector(selectProduct);
+    const loading = useSelector(selectLoading);
+    const dispatch = useDispatch();
 
     useEffect(() => {
-        fetch("https://my-json-server.typicode.com/9Yogesh9/ecommerce/cart")
-        .then((response) => response.json())
-        .then((data) => console.log(data));      
+        const localData = localStorage.ecommerce ? JSON.parse(localStorage.ecommerce) : false;
+        
+        if (localData) {
+            dispatch(getFromLocal());
+        } else {
+            dispatch(fetchProductsAsync());
+        }
+
+        dispatch(loadingFalse());
     }, [])
-    
+
 
     // "https://my-json-server.typicode.com/9Yogesh9/ecommerce/cart" to get the list of items
     return (
         <div className="content_container">
             <div className="sub_container">
                 <div className="cart_container">
-                    <CartItems />
-                    <CartItems />
-                    <CartItems />
-                    <CartItems />
-                    <CartItems />
-                    <CartItems />
+                    {loading ? <Vortex /> : products.map((item => <CartItems item={item} key={item.id} />))}
                 </div>
             </div>
         </div>
