@@ -14,6 +14,17 @@
     color: white;
 }
 
+.static_container a {
+    text-decoration: none;
+    color: white;
+}
+
+.static_container h1 {
+    font-family: 'Tilt Warp', cursive;
+
+}
+
+
 .left_control {
     width: 2rem
 }
@@ -25,6 +36,24 @@
 
 .right_control {
     width: 2rem
+}
+
+.cart_inf {
+    width: 3rem;
+    /* background-color: brown; */
+    display: flex;
+    align-items: flex-start;
+}
+
+#items_quantity{
+    /* display: none; */
+    background-color: purple;
+    /* position: absolute; */
+    /* width: 1rem; */
+    font-weight: bolder;
+    padding: 2px;
+    border: 2px solid orange;
+    border-radius: 25px;
 }
 
 .footer_position {
@@ -40,7 +69,7 @@
     justify-content: center
 }
 
-.add_new_item{
+.add_new_item {
     color: white;
     position: absolute;
     right: 4px;
@@ -48,14 +77,20 @@
     width: 5rem;
 }
 
-.add_new_item button{
+.add_new_item button {
     width: 100%;
     height: 100%;
     font-weight: bolder;
     background-image: linear-gradient(271deg, #ff0505, #f4ff00);
     border-radius: 5px;
     padding: 3px;
+    cursor: pointer;
 }
+
+.add_new_item button:hover {
+    background-image: linear-gradient(88deg, #ff0505, #f4ff00);
+}
+
 
 .sub_container {
     width: 80vw;

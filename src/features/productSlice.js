@@ -1,7 +1,15 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { fetchProduct } from './productAPI';
 
-const localProducts = localStorage.ecommerce ? JSON.parse(localStorage.ecommerce) : false;
+import {
+    addToCart,
+    getCart,
+    getLocalData,
+    setLocalData,
+    subtractFromCart
+} from './cartHandler';
+
+const localProducts = getLocalData();
 
 const initialState = {
     value: [],
@@ -14,14 +22,11 @@ export const fetchProductsAsync = createAsyncThunk(
         if (!localProducts) {
 
             const response = await fetchProduct();
-            // console.log(response);
-            const ecom = { products: [...response] };
-            localStorage.setItem('ecommerce', JSON.stringify(ecom));
+            setLocalData(response, []);
             return response;
 
         } else {
-            // console.log("Products " + localProducts);
-            return localProducts;
+            return getLocalData();
         }
     }
 )
@@ -45,45 +50,41 @@ export const productSlice = createSlice({
 
         addQuantity: (state, action) => {
             const mod_state = [...state.value];
+
             const products = mod_state.map((item) => {
                 if (item.id === action.payload.id) {
                     item.stock++;
+                    subtractFromCart(item);
                 }
                 return item;
             });
 
-            const ecom = { products: [...products] };
-            localStorage.setItem('ecommerce', JSON.stringify(ecom));
+            const cart = getCart();
 
+            setLocalData(products, cart);
             state.value = products;
         },
 
         subtractQuantity: (state, action) => {
             const mod_state = [...state.value];
-            // console.log(action.payload);
-            // const pos = mod_state.map(e => e.id).indexOf(action.payload.id);
-            // console.log("Index " + pos);
-
             const products = mod_state.map((item) => {
                 if (item.id === action.payload.id) {
-                    if (item.stock - 1 >= 0)
+                    if (item.stock - 1 >= 0) {
                         item.stock--;
+                        addToCart(item);
+                    }
                 }
                 return item;
             });
 
-            const ecom = { products: [...products] };
-            localStorage.setItem('ecommerce', JSON.stringify(ecom));
+            const cart = getCart();
 
-            state.value = products
-
+            setLocalData(products, cart);
+            state.value = products;
         },
 
         getFromLocal: (state) => {
-            // state.value = JSON.parse(localStorage.ecommerce).products;
             state.value = localStorage.ecommerce ? JSON.parse(localStorage.ecommerce).products : {};
-            // console.log("Loaded Offline ");
-            // console.log(state.value);
         }
     },
 
