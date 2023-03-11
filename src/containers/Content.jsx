@@ -16,7 +16,7 @@ import {
     selectLoading
 } from '../features/loadingSlice';
 
-import CartItems from "../components/CartItems";
+import SingleItem from "../components/SingleItem";
 import '../index.css';
 
 const Content = () => {
@@ -45,7 +45,7 @@ const Content = () => {
                 </div>
                 <div className="sub_container">
                     <div className="cart_container">
-                        {loading ? <Vortex /> : products.map((item => <CartItems item={item} key={item.id} />))}
+                        {loading ? <Vortex /> : products.map((item => <SingleItem item={item} key={item.id} />))}
                     </div>
                 </div>
             </div>

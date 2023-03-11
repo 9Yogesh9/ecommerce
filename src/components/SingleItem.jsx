@@ -5,7 +5,8 @@ import { useDispatch } from 'react-redux';
 import '../index.css';
 
 import {
-    setQuantity
+    setQuantity,
+    subOrAddCart
 } from '../features/cartSlice';
 
 import {
@@ -16,7 +17,7 @@ import {
     // selectProduct
 } from '../features/productSlice';
 
-const CartItems = ({ item }) => {
+const SingleItem = ({ item, cart }) => {
     // const products = useSelector(selectProduct);
     const dispatch = useDispatch();
 
@@ -32,6 +33,7 @@ const CartItems = ({ item }) => {
         }
 
         dispatch(setQuantity());
+        dispatch(subOrAddCart());
 
         // console.log("After " + item.stock);
     }
@@ -43,6 +45,7 @@ const CartItems = ({ item }) => {
             console.log("Max Quantity Exceded !")
         }
         dispatch(setQuantity());
+        dispatch(subOrAddCart());
     }
 
 
@@ -56,24 +59,55 @@ const CartItems = ({ item }) => {
                     {item.name}
                 </div>
                 <div className='item_data'>
+
                     <div className='item_stock'>
-                        In Stock : {item.stock ? item.stock : "Out of stock !"}
+                        {cart ?
+                            ""
+                            :
+                            <>
+                                In Stock : {item.stock ? item.stock : "Out of stock !"}
+                            </>
+                        }
                     </div>
+
                     <div className='item_price'>
-                        &#x20B9; {item.price}
+                        {cart ?
+                            <>
+                               Total Cost: &#x20B9; {item.price * item.stock}
+                            </>
+                            :
+                            <>
+                                &#x20B9; {item.price}
+                            </>
+                        }
+
+
                     </div>
                 </div>
             </div>
-            <div className='add_to_cart'>
-                {item.stock ?
-                    <button className='add_to_cart_btn' onClick={() => AddQuantity()}>Add to Cart</button>
-                    :
-                    <button className='add_to_cart_btn' disabled>Not Available</button>}
-            </div>
-            <div onClick={() => AddQuantity()}><AiFillPlusCircle /></div>
-            <div onClick={() => SubtractQuantity()}><AiFillMinusCircle /></div>
+
+            {cart ?
+                <>
+                    <div className='quantity_btn' onClick={() => AddQuantity()}><AiFillPlusCircle className='icon_control' /></div>
+
+                    <div className='item_quantity'>
+                        {item.stock}
+                    </div>
+
+                    <div className='quantity_btn' onClick={() => SubtractQuantity()}><AiFillMinusCircle className='icon_control' /></div>
+                </>
+                :
+                <div className='add_to_cart'>
+                    {item.stock ?
+                        <button className='add_to_cart_btn' onClick={() => AddQuantity()}>Add to Cart</button>
+                        :
+                        <button className='add_to_cart_btn' disabled>Not Available</button>
+                    }
+                </div>
+            }
+
         </div>
     )
 }
 
-export default CartItems;
+export default SingleItem;

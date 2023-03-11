@@ -24,7 +24,7 @@ const Header = () => {
                 <div className='right_control'>
                     <Link to='/cart'><BsCart3 className='icon_control' /></Link>
                 </div>
-                <div id='items_quantity'>{cartItems}</div>
+                <div id='items_quantity'>{cartItems.length}</div>
             </div>
         </div>
     )

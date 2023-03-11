@@ -13,7 +13,7 @@ export function setLocalData(products, cart) {
 }
 
 export function getCart() {
-    return JSON.parse(localStorage.getItem('ecommerce')).cart;
+    return getLocalData() ? getLocalData().cart:[];
 }
 
 export function setCart(cart) {

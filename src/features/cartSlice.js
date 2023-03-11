@@ -1,23 +1,28 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getLocalData, getCart } from './cartHandler';
+import { getCart } from './cartHandler';
 
 const initialState = {
-    value: getLocalData() ? getCart().length : 0,
+    value: getCart() ? getCart() : [],
     status: 'idle',
 }
 
-export const cartQuantity = createSlice({
-    name: 'cartQuantity',
+export const cart = createSlice({
+    name: 'cart',
     initialState,
 
     reducers: {
         setQuantity: (state) => {
-            state.value = getLocalData() ? getCart().length : 0
-        }
+            // state.value = getCart() ? getCart().length : 0
+        },
+
+        subOrAddCart: (state) => {
+            state.value = getCart() ? JSON.parse(JSON.stringify(getCart())) : [];
+        },
+
     }
 });
 
-export const { setQuantity } = cartQuantity.actions;
+export const { setQuantity, subOrAddCart } = cart.actions;
 export const selectCart = (state) => state.cart.value;
 
-export default cartQuantity.reducer;
+export default cart.reducer;
