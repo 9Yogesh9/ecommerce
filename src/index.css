@@ -193,6 +193,11 @@
     margin-bottom: 1rem;
 }
 
+.item_name a{
+    color: black;
+    text-decoration: none;
+}
+
 .item_data {
     width: 30rem;
     display: flex;

@@ -1,6 +1,9 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
+import ReactMarkdown from 'react-markdown';
+// const  = require('react-markdown');
+
 
 import {
     selectProduct
@@ -14,6 +17,10 @@ const ProductDetails = () => {
     console.log(products);
     console.log(product);
     console.log(id);
+    // <h1>{product.details}</h1>
+    
+    let str = "_First item_Second item_Third item_Fourth item"
+    const details = str.replaceAll("_", " \n + ")
 
     return (
         <>
@@ -26,7 +33,7 @@ const ProductDetails = () => {
                         <h1>{product.name}</h1>
                         <h1>{product.price}</h1>
                         <h1>{product.stock}</h1>
-                        <h1>{product.details}</h1>
+                        <h1><ReactMarkdown>{details}</ReactMarkdown></h1>
                     </div>
                 </div>
                 :
