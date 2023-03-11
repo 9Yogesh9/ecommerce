@@ -4,6 +4,7 @@
     padding: 0px;
 }
 
+/* Static Containers - Header, Footer */
 .static_container {
     display: flex;
     justify-content: space-around;
@@ -23,7 +24,6 @@
     font-family: 'Tilt Warp', cursive;
 
 }
-
 
 .left_control {
     width: 2rem
@@ -63,6 +63,8 @@
     width: 100%
 }
 
+/* Content Container */
+
 .content_container {
     display: flex;
     height: 88vh;
@@ -92,6 +94,7 @@
     background-image: linear-gradient(88deg, #ff0505, #f4ff00);
 }
 
+/* Sub Container */
 
 .sub_container {
     width: 80vw;
@@ -240,4 +243,23 @@
 
 .quantity_btn {
     height: 3vh;
+}
+
+/* Profduct Details Page */
+.product_details{
+    display: flex;
+    height: 90vh;    
+}
+
+.details_image{
+    background-color: rgb(111, 231, 67);
+    width: 25vw;    
+}
+
+.details_information{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: pink;
+    width: 75vw;    
 }

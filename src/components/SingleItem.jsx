@@ -1,6 +1,7 @@
 import React from 'react';
 import { AiFillPlusCircle, AiFillMinusCircle } from 'react-icons/ai';
 import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 import '../index.css';
 
@@ -56,7 +57,9 @@ const SingleItem = ({ item, cart }) => {
             </div>
             <div className='name_stock'>
                 <div className='item_name'>
-                    {item.name}
+                    <Link to={`/product_details/${item.id}`}>
+                        {item.name}
+                    </Link>
                 </div>
                 <div className='item_data'>
 
@@ -73,7 +76,7 @@ const SingleItem = ({ item, cart }) => {
                     <div className='item_price'>
                         {cart ?
                             <>
-                               Total Cost: &#x20B9; {item.price * item.stock}
+                                Total Cost: &#x20B9; {item.price * item.stock}
                             </>
                             :
                             <>

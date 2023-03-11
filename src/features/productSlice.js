@@ -26,7 +26,7 @@ export const fetchProductsAsync = createAsyncThunk(
             return response;
 
         } else {
-            return getLocalData();
+            return getLocalData().products;
         }
     }
 )
@@ -82,10 +82,6 @@ export const productSlice = createSlice({
             setLocalData(products, cart);
             state.value = products;
         },
-
-        getFromLocal: (state) => {
-            state.value = localStorage.ecommerce ? JSON.parse(localStorage.ecommerce).products : {};
-        }
     },
 
     extraReducers: (builder) => {
@@ -101,12 +97,11 @@ export const productSlice = createSlice({
 });
 
 export const {
-    getFromLocal,
     addProducts,
     removeProducts,
     addQuantity,
     subtractQuantity,
 } = productSlice.actions;
-export const selectProduct = (state) => state.product.value;
 
+export const selectProduct = (state) => state.product.value;
 export default productSlice.reducer;
