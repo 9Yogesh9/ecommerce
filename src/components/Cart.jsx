@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import SingleItem from './SingleItem';
 import { useSelector } from 'react-redux';
 
@@ -14,7 +14,10 @@ const Cart = () => {
             <div className='main_cart'>
                 <div className="cart_page">
                     <h1 className='cart_bg'>Your Cart</h1>
-                    {cartItems.map((item => <SingleItem item={item} key={item.id} cart={true} />))}
+                    {cartItems.length > 0 ?
+                        <>{cartItems.map((item => <SingleItem item={item} key={item.id} cart={true} />))}</>
+                        :
+                        <h1 style={{ marginTop: "20%" }}>Oh no ! Your cart is empty don't you want to buy something &#128521;.</h1>}
                 </div>
                 <div className="cart_amount">
                     <h1>Total Amount</h1>

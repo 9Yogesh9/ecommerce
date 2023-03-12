@@ -2,53 +2,46 @@ import React from 'react';
 import { AiFillPlusCircle, AiFillMinusCircle } from 'react-icons/ai';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+import toast, { Toaster } from 'react-hot-toast';
 
 import '../index.css';
 
 import {
-    setQuantity,
     subOrAddCart
 } from '../features/cartSlice';
 
 import {
-    // addProducts,
-    // removeProducts,
     addQuantity,
     subtractQuantity,
-    // selectProduct
 } from '../features/productSlice';
 
 const SingleItem = ({ item, cart }) => {
-    // const products = useSelector(selectProduct);
     const dispatch = useDispatch();
 
     const AddQuantity = () => {
-        // console.log("ADD ");
-        // console.log(item);
-        // console.log("Before " + item.stock);
 
         if (item.stock - 1 >= 0) {
             dispatch(subtractQuantity(item));
         } else {
-            console.log("Out of stock !")
+            notify("Product out of stock !", false);
+            return;
         }
-
-        dispatch(setQuantity());
         dispatch(subOrAddCart());
-
-        // console.log("After " + item.stock);
+        notify("Product Added to Cart !", true);
     }
 
     const SubtractQuantity = () => {
         if (item.stock + 1 < 11) {
             dispatch(addQuantity(item));
         } else {
-            console.log("Max Quantity Exceded !")
+            notify("No Product in the Cart !", false);
+            return;
         }
-        dispatch(setQuantity());
         dispatch(subOrAddCart());
+        notify("Product Removed from Cart !", false);
     }
 
+    const notify = (text, good) => { good ? toast.success(text) : toast.error(text) };
 
     return (
         <div className='cart_item'>
@@ -108,7 +101,7 @@ const SingleItem = ({ item, cart }) => {
                     }
                 </div>
             }
-
+            <Toaster position="top-right" />
         </div>
     )
 }

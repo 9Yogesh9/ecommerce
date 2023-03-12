@@ -29,6 +29,7 @@ const MainContainer = () => {
             <Routes>
                 <Route path="/" element={<Content />} />
                 <Route path="/add_product" element={<AddProduct />} />
+                <Route path="/add_product/:id" element={<AddProduct />} />
                 <Route path="/cart" element={<Cart />} />
                 <Route path="/product_details/:id" element={<ProductDetails />} />
                 <Route path="*" element={<NotFound />} />

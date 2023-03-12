@@ -1,5 +1,6 @@
 import React from 'react';
-import { BsCart3, BsFillInfoCircleFill } from 'react-icons/bs';
+import { AiFillHome } from 'react-icons/ai';
+import { BsCart3 } from 'react-icons/bs';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
@@ -15,7 +16,7 @@ const Header = () => {
     return (
         <div className='static_container'>
             <div className='left_control'>
-                <BsFillInfoCircleFill className='icon_control' />
+                <Link to="/"><AiFillHome className='icon_control' /></Link>
             </div>
             <div>
                 <Link to='/'><h1>EKart</h1></Link>

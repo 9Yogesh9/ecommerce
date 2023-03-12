@@ -11,9 +11,6 @@ export const cart = createSlice({
     initialState,
 
     reducers: {
-        setQuantity: (state) => {
-            // state.value = getCart() ? getCart().length : 0
-        },
 
         subOrAddCart: (state) => {
             state.value = getCart() ? JSON.parse(JSON.stringify(getCart())) : [];
@@ -22,7 +19,7 @@ export const cart = createSlice({
     }
 });
 
-export const { setQuantity, subOrAddCart } = cart.actions;
+export const { subOrAddCart } = cart.actions;
 export const selectCart = (state) => state.cart.value;
 
 export default cart.reducer;

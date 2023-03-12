@@ -37,9 +37,37 @@ export const productSlice = createSlice({
 
     reducers: {
         addProducts: (state, action) => {
-            const mod_state = [...state];
-            mod_state.push(action.payload);
-            state.value = mod_state;
+            // Get current cart and products
+            const products = [...state.value];
+            const cart = getCart();
+
+            // Check if product already exists or not and edit if present or add if its new
+            const itemP = JSON.parse(JSON.stringify(action.payload));
+            itemP.id = Number(itemP.id);
+            const existsP = products.map(e => e.id).indexOf(itemP.id);
+
+            if (existsP < 0) {
+                // This is a new product
+                products.push(itemP);
+
+            } else {
+                // The product already exists in list and should be checked if also present in cart
+                const itemC = JSON.parse(JSON.stringify(action.payload));
+                itemC.id = Number(itemC.id);
+                const existsC = cart.map(e => e.id).indexOf(itemC.id);
+                
+                itemP.stock = products[existsP].stock;
+                products[existsP] = itemP;
+                
+                if (existsC > -1) {
+                    // Product is present in cart so update it
+                    itemC.stock = cart[existsC].stock;
+                    cart[existsC] = itemC;
+                }
+            }
+
+            setLocalData(products, cart);
+            state.value = products;
         },
 
         removeProducts: (state, action) => {
