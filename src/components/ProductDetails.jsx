@@ -24,12 +24,12 @@ const ProductDetails = () => {
     const dispatch = useDispatch();
     let { id } = useParams();
 
-    const exists = cart.filter((e) => e.id == id);
+    const exists = cart.filter((e) => Number(e.id) === Number(id));
     const currItem = exists.length > 0 ? exists[0].stock : 0;
     // const product = products[id - 1];
-    const product_exists = products.filter((e) => e.id == id);
+    const product_exists = products.filter((e) => Number(e.id) === Number(id));
     const product = product_exists.length > 0 ? product_exists[0] : false;
-    
+
     const details = product ? product.details.replaceAll("_", " \n + ") : "No description Found";
 
     const AddQuantity = () => {
