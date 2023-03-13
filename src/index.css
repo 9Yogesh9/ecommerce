@@ -46,16 +46,12 @@
 
 .cart_inf {
     width: 3rem;
-    /* background-color: brown; */
     display: flex;
     align-items: flex-start;
 }
 
 #items_quantity {
-    /* display: none; */
     background-color: purple;
-    /* position: absolute; */
-    /* width: 1rem; */
     font-weight: bolder;
     padding: 2px;
     border: 2px solid orange;
@@ -81,7 +77,6 @@
 .content_container {
     display: flex;
     height: 90vh;
-    /* background-color: #6d336d; */
 }
 
 #add_new_item {
@@ -144,7 +139,6 @@
 
 .sub_container {
     width: 80vw;
-    /* background-color: #1a5528; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -167,7 +161,6 @@
     display: flex;
     width: 100%;
     height: 90%;
-    /* background-color: pink; */
     overflow-y: auto;
     flex-direction: column;
     align-items: center;
@@ -177,7 +170,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* background-color: purple; */
     height: 90vh;
     overflow-y: auto;
     padding: 5px;
@@ -185,7 +177,6 @@
 }
 
 .cart_amount {
-    /* background-color: rgb(46, 222, 30); */
     height: 90vh;
     width: 20vw;
     padding: 5px;
@@ -311,7 +302,6 @@
 }
 
 .details_image {
-    /* background-color: rgb(111, 231, 67); */
     width: 25vw;
 }
 
@@ -319,7 +309,6 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    /* background-color: pink; */
     width: 75%;
     justify-content: center;
     font-family: 'Tilt Warp', cursive;
@@ -328,7 +317,6 @@
 .details_headers {
     display: flex;
     justify-content: space-between;
-    /* background-color: pink; */
     width: 95%;
     padding: 3rem;
     align-items: center;
@@ -337,7 +325,6 @@
 
 .details {
     width: 95%;
-    /* background-color: #ef741f; */
     padding: 3rem;
     color: #808080;
 }

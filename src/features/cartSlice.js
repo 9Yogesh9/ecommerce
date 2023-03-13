@@ -16,10 +16,14 @@ export const cart = createSlice({
             state.value = getCart() ? JSON.parse(JSON.stringify(getCart())) : [];
         },
 
+        emptyCart: (state) => {
+            state.value = [];
+        }
+
     }
 });
 
-export const { subOrAddCart } = cart.actions;
+export const { subOrAddCart, emptyCart } = cart.actions;
 export const selectCart = (state) => state.cart.value;
 
 export default cart.reducer;

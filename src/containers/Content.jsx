@@ -7,6 +7,7 @@ import toast, { Toaster } from 'react-hot-toast';
 
 import { emptyState, fetchProductsAsync, selectProduct } from '../features/productSlice';
 import { selectLoading, loadingTrue, loadingFalse } from '../features/loadingSlice';
+import {emptyCart} from '../features/cartSlice';
 
 import SingleItem from "../components/SingleItem";
 import '../index.css';
@@ -19,6 +20,7 @@ const Content = () => {
     const [sortPrice, setSortPrice] = useState([]);
     const [showSorted, setShowSorted] = useState(false);
 
+    // Sorting Prices High to Low
     const SortNow = () => {
         if (!showSorted) {
             const getSorted = [...products].sort((a, b) => b.price - a.price);
@@ -27,10 +29,13 @@ const Content = () => {
         }
     }
 
+    // Clearing states of redux and fetching data from API
     const RestoreApp = () => {
         dispatch(emptyState());
+        dispatch(emptyCart());
         dispatch(loadingTrue());
         localStorage.clear();
+
         Notify("Replenishing the Store. Please wait !", true);
 
         setTimeout(() => {
@@ -38,7 +43,7 @@ const Content = () => {
             setTimeout(() => {
                 dispatch(loadingFalse());
             }, 2000)
-        }, 2000);
+        }, 1000);
     }
 
     const Notify = (text, good) => { good ? toast.success(text) : toast.error(text) };

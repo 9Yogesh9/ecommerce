@@ -34,7 +34,8 @@ const AddProduct = () => {
     dispatch(addProducts(formJson));
     dispatch(subOrAddCart());
     id ? notify("Product Edited Successfully !", true) : notify("Product Added Successfully !", true);
-    
+
+    // Naviagte to home page after editing/adding of product
     setTimeout(() => {
       navigate('/');
     }, 2000);
@@ -45,26 +46,37 @@ const AddProduct = () => {
   return (
     <div className='add_product'>
       <div className="add_product_image">
-        <h1>UPDATE</h1>
-        <h1>PRODUCTS</h1>
+        {id ?
+          <>
+            <h1>UPDATE</h1>
+            <h1>PRODUCT</h1>
+          </> :
+          <>
+            <h1>ADD</h1>
+            <h1>PRODUCT</h1>
+          </>}
       </div>
       <div className="add_product_inf">
         <div className="add_product_form_container">
           <form onSubmit={handleSubmit} className="add_product_form">
             <label>
-              Name: <input name="name" defaultValue={product ? product.name : ""} />
+              Name: <input name="name" placeholder='Product Name' defaultValue={product ? product.name : ""} />
             </label>
             <label>
-              Image: <input name="image" defaultValue={product ? product.image : ""} />
+              Image Link: <input name="image" placeholder='Image Link' defaultValue={product ? product.image : ""} />
             </label>
             <label>
-              Price: <input type="number" name="price" defaultValue={product ? product.price : ""} />
+              Price: <input type="number" name="price" placeholder='Product Price' defaultValue={product ? product.price : ""} />
             </label>
             <label>
-              Details: <textarea name="details" defaultValue={product ? product.details : ""} />
+              Details: <textarea name="details" placeholder='_Point 1_Point 2_Point 3' defaultValue={product ? product.details : ""} />
             </label>
             <p id="add_product_info">Please use '_' before each point to separate details.</p>
-            <button type="submit" id="add_product_btn">Submit form</button>
+            {id ?
+              <button type="submit" id="add_product_btn">Update Product</button>
+              :
+              <button type="submit" id="add_product_btn">Add Product</button>
+            }
           </form>
         </div>
       </div>

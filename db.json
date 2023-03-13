@@ -2,45 +2,73 @@
     "cart": [
         {
             "id": 1,
-            "name": "OnePlus 11R 5G (Galactic Silver, 8GB RAM, 128GB Storage)",
-            "price": 39999,
-            "image":"https://m.media-amazon.com/images/I/613SAOPmLeL._SX679_.jpg",
-            "details":"_More innovation, less footprint – Galaxy S23 Ultra's striking symmetrical design returns with one major difference: recycled and eco-conscious materials. From the metal frame to the glass finish, it's polished with fresh new colors inspired by nature._Note's signature tool comes built in - The built-in S Pen keeps the legacy of Note alive. Plus, it helps you ditch the dependency on notebooks, making sketches and jotting notes effortless and eco-friendly._Low light. Camera. Action - A Pro-grade Camera grabs brighter photos and video, dusk to dawn. The intelligent pixel sensor adapts to low light with Nightography and the camera lens tones down flare for clearer captures"
+            "name": "Mi 11X Cosmic Black 6GB RAM 128GB ROM Storage",
+            "price": 29999,
+            "image": "https://m.media-amazon.com/images/I/71VQXjN6R7S._SL1500_.jpg",
+            "details": "_Processor: Qualcomm Snapdragon 870 5G with Kryo 585 Octa-core; 7nm process; Up to 3.2GHz clock speed; Liquidcool technology_Camera: 48 MP Triple Rear camera with 8MP Ultra-wide and 5MP Super macro | 20 MP Front camera_Display: 120Hz high refresh rate FHD+ (1080x2400) AMOLED Dot display; 16.9 centimeters (6.67 inch); 2.76mm ultra tiny punch hole; HDR 10+ support; 360Hz touch sampling, MEMC technology_Battery: 4520 mAH large battery with 33W fast charger in-box and Type-C connectivity."
         },
         {
             "id": 2,
-            "name": "Samsung Galaxy S23 Ultra 5G (Green, 12GB, 512GB Storage)",
-            "price": 134999,
-            "image":"https://m.media-amazon.com/images/I/61VfL-aiToL._SX679_.jpg",
-            "details":"_More innovation, less footprint – Galaxy S23 Ultra's striking symmetrical design returns with one major difference: recycled and eco-conscious materials. From the metal frame to the glass finish, it's polished with fresh new colors inspired by nature._Note's signature tool comes built in - The built-in S Pen keeps the legacy of Note alive. Plus, it helps you ditch the dependency on notebooks, making sketches and jotting notes effortless and eco-friendly._Low light. Camera. Action - A Pro-grade Camera grabs brighter photos and video, dusk to dawn. The intelligent pixel sensor adapts to low light with Nightography and the camera lens tones down flare for clearer captures"
+            "name": "OnePlus 11R 5G (Galactic Silver, 8GB RAM, 128GB Storage)",
+            "price": 39999,
+            "image": "https://m.media-amazon.com/images/I/613SAOPmLeL._SX679_.jpg",
+            "details": "_Camera: Sensor: 50MP Main Camera with Sony IMX890 (OIS supported), 8MP Ultrawide Camera (FOV: 120 degree) and Macro Lens; 16MP Front (Selfie) Camera with EIS support._Camera Modes: Nightscape, Ultra HDR, Smart Scene Recognition, Portrait Mode, Pro Mode, Panorama, Tilt-Shift mode, Long Exposure, Dual-View Video, Retouch, Movie Mode, Raw file, Filters, Super Stable, Video Nightscape, Video HDR, Video Portrait, Focus Tracking, Timelapse, Macro mode._Display: 6.7 Inches; 120 Hz Super Fluid AMOLED; Resolution: 2772 X 1240 pixels ,450 ppi, 20.1:9, 10-bit Color Depth, HDR10."
         },
         {
             "id": 3,
-            "name": "OnePlus 10T 5G (Moonstone Black, 16GB RAM, 256GB Storage)",
-            "price": 55999,
-            "image":"https://m.media-amazon.com/images/I/71XKAnxCsLL._SX679_.jpg",
-            "details":"_More innovation, less footprint – Galaxy S23 Ultra's striking symmetrical design returns with one major difference: recycled and eco-conscious materials. From the metal frame to the glass finish, it's polished with fresh new colors inspired by nature._Note's signature tool comes built in - The built-in S Pen keeps the legacy of Note alive. Plus, it helps you ditch the dependency on notebooks, making sketches and jotting notes effortless and eco-friendly._Low light. Camera. Action - A Pro-grade Camera grabs brighter photos and video, dusk to dawn. The intelligent pixel sensor adapts to low light with Nightography and the camera lens tones down flare for clearer captures"
+            "name": "Samsung Galaxy S23 Ultra 5G (Green, 12GB, 512GB Storage)",
+            "price": 134999,
+            "image": "https://m.media-amazon.com/images/I/61VfL-aiToL._SX679_.jpg",
+            "details": "_More innovation, less footprint – Galaxy S23 Ultra's striking symmetrical design returns with one major difference: recycled and eco-conscious materials. From the metal frame to the glass finish, it's polished with fresh new colors inspired by nature._Note's signature tool comes built in - The built-in S Pen keeps the legacy of Note alive. Plus, it helps you ditch the dependency on notebooks, making sketches and jotting notes effortless and eco-friendly._Low light. Camera. Action - A Pro-grade Camera grabs brighter photos and video, dusk to dawn. The intelligent pixel sensor adapts to low light with Nightography and the camera lens tones down flare for clearer captures"
         },
         {
             "id": 4,
-            "name": "Apple iPhone 14 Pro 128GB Space Black",
-            "price": 122999,
-            "image":"https://m.media-amazon.com/images/I/61XO4bORHUL._SL1500_.jpg",
-            "details":"_More innovation, less footprint – Galaxy S23 Ultra's striking symmetrical design returns with one major difference: recycled and eco-conscious materials. From the metal frame to the glass finish, it's polished with fresh new colors inspired by nature._Note's signature tool comes built in - The built-in S Pen keeps the legacy of Note alive. Plus, it helps you ditch the dependency on notebooks, making sketches and jotting notes effortless and eco-friendly._Low light. Camera. Action - A Pro-grade Camera grabs brighter photos and video, dusk to dawn. The intelligent pixel sensor adapts to low light with Nightography and the camera lens tones down flare for clearer captures"
+            "name": "OnePlus 10T 5G (Moonstone Black, 16GB RAM, 256GB Storage)",
+            "price": 55999,
+            "image": "https://m.media-amazon.com/images/I/71XKAnxCsLL._SX679_.jpg",
+            "details": "_Camera: 50MP Main Camera with Sony IMX766 and OIS, 8MP Ultrawide Camera with 120 degree FOV and 2MP macro lens with LED Flash; 16MP Front (Selfie) Camera with EIS support_Camera Features: Nightscape Mode, Ultra HDR, Smart Scene Recognition, Portrait Mode, Pro Mode, Panorama, Tilt-Shift mode, Long Exposure, Dual-View Video, Retouch, Movie Mode, Cat/Dog Face Focus, Video Nightscape, Video HDR, Video Portrait, Focus Tracking, Timelapse, Macro mode_Display: 6.7 Inches; 120 Hz Fluid AMOLED Display with Corning Gorilla Glass; Resolution: 2412 X 1080 pixels; HDR 10+, sRGB, Display P3, 10-bit Color Depth._Display Features: Image Sharpener, Video Color Enhancer, Screen Color Mode, Auto Brightness, Manual Brightness, Screen Color Mode, Bright HDR Video mode, Dark Mode, Screen Color Pro Mode_Operating System: OxygenOS based on Android 12"
         },
         {
             "id": 5,
-            "name": "Xiaomi 12 Pro | 5G (Opera Muave, 8GB RAM, 256GB Storage)",
-            "price": 52999,
-            "image":"https://m.media-amazon.com/images/I/71lYm08fIZL._SX679_.jpg",
-            "details":"_More innovation, less footprint – Galaxy S23 Ultra's striking symmetrical design returns with one major difference: recycled and eco-conscious materials. From the metal frame to the glass finish, it's polished with fresh new colors inspired by nature._Note's signature tool comes built in - The built-in S Pen keeps the legacy of Note alive. Plus, it helps you ditch the dependency on notebooks, making sketches and jotting notes effortless and eco-friendly._Low light. Camera. Action - A Pro-grade Camera grabs brighter photos and video, dusk to dawn. The intelligent pixel sensor adapts to low light with Nightography and the camera lens tones down flare for clearer captures"
+            "name": "Apple iPhone 14 Pro 128GB Space Black",
+            "price": 122999,
+            "image": "https://m.media-amazon.com/images/I/61XO4bORHUL._SL1500_.jpg",
+            "details": "_15.54 cm (6.1-inch) Super Retina XDR display featuring Always-On and ProMotion._Dynamic Island, a magical new way to interact with iPhone._48MP Main camera for up to 4x greater resolution_Action mode for smooth, steady, handheld videos"
         },
         {
             "id": 6,
+            "name": "Xiaomi 12 Pro | 5G (Opera Muave, 8GB RAM, 256GB Storage)",
+            "price": 52999,
+            "image": "https://m.media-amazon.com/images/I/71lYm08fIZL._SX679_.jpg",
+            "details": "_The Pro-grade triple 50MP camera array unleashes the true power of a triple-camera setup. The large 50MP Sony IMX707 captures upto 120% more light. The 50MP Telephoto & 50MP Ultra-wide enable you to enjoy a top-class cinematography experience. The 32MP front facing camera is segment best._The 6.73'' WQHD 120Hz AMOLED display with AdaptiveSync Pro is a master in clarity, brightness and smoothness. The display is certified A+ by DisplayMate & is Dolby Vision & HDR10+ compliant. It is protected by Corning Gorilla Glass Victus and comes with a In-display fingerprint sensor_The flagship Snapdragon 8 Gen 1, 4nm processor is designed to provide groundbreaking performance. The super-big 2900mm² vapour chamber, along with three layers of massive graphite sheets provides an advanced cooling system._The 120W in-box HyperCharger can fully charge the massive 4600mAh battery in 18 minutes. The device also supports upto 50W of Wireless Turbo charging."
+        },
+        {
+            "id": 7,
             "name": "iQOO 11 5G (Legend, 8GB RAM, 256 GB Storage)",
             "price": 59990,
-            "image":"https://m.media-amazon.com/images/I/71ZeuCAbcSL._SX679_.jpg",
-            "details":"_More innovation, less footprint – Galaxy S23 Ultra's striking symmetrical design returns with one major difference: recycled and eco-conscious materials. From the metal frame to the glass finish, it's polished with fresh new colors inspired by nature._Note's signature tool comes built in - The built-in S Pen keeps the legacy of Note alive. Plus, it helps you ditch the dependency on notebooks, making sketches and jotting notes effortless and eco-friendly._Low light. Camera. Action - A Pro-grade Camera grabs brighter photos and video, dusk to dawn. The intelligent pixel sensor adapts to low light with Nightography and the camera lens tones down flare for clearer captures"
+            "image": "https://m.media-amazon.com/images/I/71ZeuCAbcSL._SX679_.jpg",
+            "details": "_Snapdragon 8 Gen 2 Mobile Platform adopts TSMC 4NM process which has 10% higher CPU peak performance and 20% higher GPU peak performance than Snapdragon 8+ Gen 1. Also, equipped with LPDDR5X RAM & UFS 4.0 storage._The 2K AMOLED display has 77.8% more pixels than the 1080P display. E6 Performs much better than E4 in terms of power consumption and brightness. 25% less in Power Consumption and 1800 nits Local Peak Brightness_iQOO 11's 120W FlashCharge charges 50% battery in just 8 mins and 100% battery in just 25 mins._V2 Chip provides better gaming and photography experience. It can increase the frame rate from 45fps/ 60fps to 90fps & 120fps respectively. It also facilitates users to shoot better night videos/ photos._GN5 sensor's dual pixel pro technology improves the autofocus function of the phone. The sensor is 50 MP in resolution."
+        },
+        {
+            "id": 8,
+            "name": "iQOO 9 Pro 5G (Legend, 8GB RAM, 256GB Storage)",
+            "price": 54990,
+            "image": "https://m.media-amazon.com/images/I/61lWkGr0RiL._SL1200_.jpg",
+            "details": "_Snapdragon️ 8 Gen 1 Mobile Processor which uses the latest 4nm process technology & has a maximum increase of 20% in CPU performance, a maximum increase of 30% in GPU performance (Compared with Qualcomm Snapdragon 888 5G Mobile Platform)._120W FlashCharge which can charge 50% battery in just 8 minutes and 100% battery in just 20 minutes. Also, 50W Wireless FlashCharge using vertical charger which provides convenience and universality._50MP GN5 Gimbal Camera which is equipped with GN5's all-directional autofocus technology Dual Pixel Pro greatly improves the autofocus performance, Gimbal increases the exposure time to capture breathtaking Motion and Night picture, 50MP 150° Fisheye Wide Angle, 16MP Telephoto/Portrait Camera & much more._3D Ultrasonic Large Fingerprint Sensor which will help users in Unlocking without light: Better user experience at night, High security: 3D information recognized by ultrasonic fingerprint scanning & All-scenario: unlocking interfered by strong outdoor light."
+        },
+        {
+            "id": 9,
+            "name": "OnePlus 10R 5G (Forest Green, 12GB RAM, 256GB Storage, 80W SuperVOOC)",
+            "price": 35999,
+            "image": "https://m.media-amazon.com/images/I/716uVx3Wr5L._SL1500_.jpg",
+            "details": "_Camera: 50MP Main Camera with Sony IMX766 and 2MP Macro Camera with Dual LED Flash; 16MP Front (Selfie) Camera with Sony IMX471_Camera Features: Nightscape2.0, Super Macro, UltraShot HDR, Smart Scene Recognition, Portrait mode, Pro mode, Panorama, Tilt-shift mode, Focus Peaking, Filters, Video Nightscape, Video HDR, Video Portrait Timelapse, Hyperlapse Mode_Display Features: Hyper Touch Mode, Reading Mode, Night Mode, Eye Comfort Mode, Auto brightness."
+        },
+        {
+            "id": 10,
+            "name": "Tecno Phantom X2 5G Stardust Grey (8GB RAM,256GB Storage) | World's 1st 4nm Dimensity 9000 5G Processor",
+            "price": 39999,
+            "image": "https://m.media-amazon.com/images/I/613kSLrCn7L._SL1280_.jpg",
+            "details": "_World's 1st 4nm Dimensity 9000 5G Processor | 5G Bands with 3CC Carrier aggregation and dual SIM dual active 5G | Segment best overall One Million Antutu score for beasty performance._Extraordinary 64MP RGBW(G+P) OIS Ultra Clear Night Camera | accept 200% more light | Amazing Night Shot | 3D LUT | Wider P3 Color Gamut | Vivid Colors | Multiple Shooting Modes | 32MP Selfie camera_6.8' FHD+ Dual Curved AMOLED display for truly brilliant vision | 120Hz Refresh rate | 360Hz Touch Sampling rate | Super smooth touch resonse_8GB LPDDR5 RAM and UFS3.1 256GB ROM | MemFusion 2.1 RAM Extension upto 5GB to make the total RAM as 13GB | LPDDR5 RAM provide 1.5x faster speed than previous generation RAM."
         }
     ],
     "profile": {

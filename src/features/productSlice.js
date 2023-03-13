@@ -24,7 +24,7 @@ export const fetchProductsAsync = createAsyncThunk(
             const response = await fetchProduct();
             setLocalData(response, []);
             return response;
-
+            
         } else {
             return getLocalData().products;
         }

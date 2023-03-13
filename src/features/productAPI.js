@@ -7,7 +7,6 @@ export function fetchProduct() {
                     item.stock = 10;
                     return item;
                 })
-                // console.log(`Async fetch ${JSON.stringify(mod_data)}`);
                 return mod_data;
             });
         resolve(products);

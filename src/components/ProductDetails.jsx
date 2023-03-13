@@ -35,11 +35,11 @@ const ProductDetails = () => {
 
     const details = product ? product.details.replaceAll("_", " \n + ") : "No description Found";
 
+    // Add quantity to cart and subtract from the stock
     const AddQuantity = () => {
         if (product.stock - 1 >= 0) {
             dispatch(subtractQuantity(product));
         } else {
-            // console.log("Out of stock !");
             notify("Product out of stock !", false);
             return;
         }
@@ -47,6 +47,7 @@ const ProductDetails = () => {
         notify("Product Added to Cart !", true);
     }
 
+    // Subtract quantity to cart and add to the stock
     const SubtractQuantity = () => {
         if (product.stock + 1 < 11) {
             dispatch(addQuantity(product));
@@ -58,6 +59,7 @@ const ProductDetails = () => {
         notify("Product Removed from Cart !", false);
     }
 
+    // Delete item from products list. Product can't be deleted if it is added in cart.
     const DeleteItem = () => {
         if (currItem > 0) {
             notify("Product can't be deleted as its added in cart ! \n Please remove the product from cart", false);

@@ -18,8 +18,9 @@ import {
 const SingleItem = ({ item, cart }) => {
     const dispatch = useDispatch();
 
+    // Add quantity to cart and subtract from the stock
     const AddQuantity = () => {
-        if (item.stock < 10 || (!cart && item.stock<=10)) {
+        if (item.stock < 10 || (!cart && item.stock <= 10)) {
             dispatch(subtractQuantity(item));
         } else {
             notify("Product out of stock !", false);
@@ -28,7 +29,8 @@ const SingleItem = ({ item, cart }) => {
         dispatch(subOrAddCart());
         notify("Product Added to Cart !", true);
     }
-    
+
+    // Subtract quantity to cart and add to the stock
     const SubtractQuantity = () => {
         if (item.stock + 1 < 12) {
             dispatch(addQuantity(item));
@@ -75,8 +77,6 @@ const SingleItem = ({ item, cart }) => {
                                 &#x20B9; {item.price}
                             </>
                         }
-
-
                     </div>
                 </div>
             </div>
