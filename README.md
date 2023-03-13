@@ -54,7 +54,33 @@ Run Ekart with npm
 ### Screenshots
 
 Home Page:
-![App Screenshot](https://raw.githubusercontent.com/9Yogesh9/to-do-react/main/public/Screenshot%20dark.png)
+![App Screenshot](https://raw.githubusercontent.com/9Yogesh9/ecommerce/main/public/homepageP.png)
 
 Product details:
-![App Screenshot](https://raw.githubusercontent.com/9Yogesh9/to-do-react/main/public/Screenshot%20light.png)
+![App Screenshot](https://raw.githubusercontent.com/9Yogesh9/ecommerce/main/public/productDetailsP.png)
+
+Cart Page:
+![App Screenshot](https://raw.githubusercontent.com/9Yogesh9/ecommerce/main/public/cartP.png)
+
+Add Product:
+![App Screenshot](https://raw.githubusercontent.com/9Yogesh9/ecommerce/main/public/addProductP.png)
+
+Update Product:
+![App Screenshot](https://raw.githubusercontent.com/9Yogesh9/ecommerce/main/public/modifyProductP.png)
+
+## Mobile Screen:
+
+Home Page:
+![App Screenshot](https://raw.githubusercontent.com/9Yogesh9/ecommerce/main/public/homepageM.png)
+
+Product details:
+![App Screenshot](https://raw.githubusercontent.com/9Yogesh9/ecommerce/main/public/productDetailsM.png)
+
+Cart Page:
+![App Screenshot](https://raw.githubusercontent.com/9Yogesh9/ecommerce/main/public/cartM.png)
+
+Add Product:
+![App Screenshot](https://raw.githubusercontent.com/9Yogesh9/ecommerce/main/public/addProductM.png)
+
+Update Product:
+![App Screenshot](https://raw.githubusercontent.com/9Yogesh9/ecommerce/main/public/modifyProductM.png)
