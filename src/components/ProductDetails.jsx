@@ -2,7 +2,8 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { AiFillPlusCircle, AiFillMinusCircle } from 'react-icons/ai';
 import { HiOutlinePencilSquare } from 'react-icons/hi2';
-import { Link, useParams } from 'react-router-dom';
+import { RiDeleteBin5Line } from 'react-icons/ri'
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import toast, { Toaster } from 'react-hot-toast';
 
@@ -13,11 +14,13 @@ import {
 
 import {
     addQuantity,
+    removeProducts,
     subtractQuantity,
     selectProduct
 } from '../features/productSlice';
 
 const ProductDetails = () => {
+    const navigate = useNavigate();
 
     const products = useSelector(selectProduct);
     const cart = useSelector(selectCart)
@@ -26,7 +29,7 @@ const ProductDetails = () => {
 
     const exists = cart.filter((e) => Number(e.id) === Number(id));
     const currItem = exists.length > 0 ? exists[0].stock : 0;
-    // const product = products[id - 1];
+
     const product_exists = products.filter((e) => Number(e.id) === Number(id));
     const product = product_exists.length > 0 ? product_exists[0] : false;
 
@@ -55,6 +58,18 @@ const ProductDetails = () => {
         notify("Product Removed from Cart !", false);
     }
 
+    const DeleteItem = () => {
+        if (currItem > 0) {
+            notify("Product can't be deleted as its added in cart ! \n Please remove the product from cart", false);
+        } else {
+            notify("Product Deleted Successfully !", true);
+            setTimeout(() => {
+                dispatch(removeProducts(product));
+                navigate('/');
+            }, 2000);
+        }
+    }
+
     const notify = (text, good) => { good ? toast.success(text) : toast.error(text) };
 
     return (
@@ -67,7 +82,7 @@ const ProductDetails = () => {
                     <div className="details_information">
 
                         <div className='details_headers'>
-                            <div><h1>{product.name}</h1></div>
+                            <div id="details_name"><h1>{product.name}</h1></div>
                             <div><h1> &#x20B9; {product.price}</h1></div>
                         </div>
 
@@ -96,6 +111,9 @@ const ProductDetails = () => {
                     <Toaster position="top-right" />
                     <div className='edit_product'>
                         <Link to={`/add_product/${product.id}`}><HiOutlinePencilSquare className='icon_control' /></Link>
+                    </div>
+                    <div className='delete_product' onClick={() => DeleteItem()}>
+                        <RiDeleteBin5Line className='icon_control' />
                     </div>
                 </div>
                 :

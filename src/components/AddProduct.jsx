@@ -64,7 +64,7 @@ const AddProduct = () => {
               Details: <textarea name="details" defaultValue={product ? product.details : ""} />
             </label>
             <p id="add_product_info">Please use '_' before each point to separate details.</p>
-            <button type="submit">Submit form</button>
+            <button type="submit" id="add_product_btn">Submit form</button>
           </form>
         </div>
       </div>

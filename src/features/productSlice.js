@@ -20,7 +20,7 @@ export const fetchProductsAsync = createAsyncThunk(
     'products/fetch',
     async () => {
         if (!localProducts) {
-
+            // Load products using API if not having local product store or local product store gets empty
             const response = await fetchProduct();
             setLocalData(response, []);
             return response;
@@ -55,10 +55,10 @@ export const productSlice = createSlice({
                 const itemC = JSON.parse(JSON.stringify(action.payload));
                 itemC.id = Number(itemC.id);
                 const existsC = cart.map(e => e.id).indexOf(itemC.id);
-                
+
                 itemP.stock = products[existsP].stock;
                 products[existsP] = itemP;
-                
+
                 if (existsC > -1) {
                     // Product is present in cart so update it
                     itemC.stock = cart[existsC].stock;
@@ -71,8 +71,9 @@ export const productSlice = createSlice({
         },
 
         removeProducts: (state, action) => {
-            const mod_state = [...state];
-            const products = mod_state.filter((item) => item.id !== action.payload.id);
+            const products = [...state.value].filter((item) => item.id !== action.payload.id);
+
+            setLocalData(products, getCart());
             state.value = products;
         },
 
@@ -110,6 +111,10 @@ export const productSlice = createSlice({
             setLocalData(products, cart);
             state.value = products;
         },
+
+        emptyState: (state) => {
+            state.value = [];
+        }
     },
 
     extraReducers: (builder) => {
@@ -129,6 +134,7 @@ export const {
     removeProducts,
     addQuantity,
     subtractQuantity,
+    emptyState,
 } = productSlice.actions;
 
 export const selectProduct = (state) => state.product.value;

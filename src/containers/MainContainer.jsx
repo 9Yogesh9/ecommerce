@@ -12,19 +12,21 @@ import Cart from '../components/Cart';
 import ProductDetails from '../components/ProductDetails';
 
 import { fetchProductsAsync, } from '../features/productSlice';
-import { loadingFalse, } from '../features/loadingSlice';
+import { loadingFalse } from '../features/loadingSlice';
 
 const MainContainer = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
         dispatch(fetchProductsAsync());
-        dispatch(loadingFalse());
+        setTimeout(() => {
+            dispatch(loadingFalse());
+        }, 1000);
     }, [])
 
     // "https://my-json-server.typicode.com/9Yogesh9/ecommerce/cart" to get the list of items
     return (
-        <div style={full_screen}>
+        <div className='full_screen'>
             <Header />
             <Routes>
                 <Route path="/" element={<Content />} />
@@ -40,10 +42,3 @@ const MainContainer = () => {
 }
 
 export default MainContainer;
-
-const full_screen = {
-    width: '100vw',
-    height: '100vh',
-    // backgroundColor: 'black', 
-    // color: 'white'
-}

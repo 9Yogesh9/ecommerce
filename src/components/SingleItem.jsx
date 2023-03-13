@@ -19,8 +19,7 @@ const SingleItem = ({ item, cart }) => {
     const dispatch = useDispatch();
 
     const AddQuantity = () => {
-
-        if (item.stock - 1 >= 0) {
+        if (item.stock < 10 || (!cart && item.stock<=10)) {
             dispatch(subtractQuantity(item));
         } else {
             notify("Product out of stock !", false);
@@ -29,9 +28,9 @@ const SingleItem = ({ item, cart }) => {
         dispatch(subOrAddCart());
         notify("Product Added to Cart !", true);
     }
-
+    
     const SubtractQuantity = () => {
-        if (item.stock + 1 < 11) {
+        if (item.stock + 1 < 12) {
             dispatch(addQuantity(item));
         } else {
             notify("No Product in the Cart !", false);
@@ -83,7 +82,7 @@ const SingleItem = ({ item, cart }) => {
             </div>
 
             {cart ?
-                <>
+                <div className='quantity_control'>
                     <div className='quantity_btn' onClick={() => AddQuantity()}><AiFillPlusCircle className='icon_control' /></div>
 
                     <div className='item_quantity'>
@@ -91,7 +90,7 @@ const SingleItem = ({ item, cart }) => {
                     </div>
 
                     <div className='quantity_btn' onClick={() => SubtractQuantity()}><AiFillMinusCircle className='icon_control' /></div>
-                </>
+                </div>
                 :
                 <div className='add_to_cart'>
                     {item.stock ?
