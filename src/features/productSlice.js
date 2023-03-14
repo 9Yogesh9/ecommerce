@@ -9,8 +9,6 @@ import {
     subtractFromCart
 } from './cartHandler';
 
-const localProducts = getLocalData();
-
 const initialState = {
     value: [],
     status: 'idle',
@@ -19,14 +17,16 @@ const initialState = {
 export const fetchProductsAsync = createAsyncThunk(
     'products/fetch',
     async () => {
+        const localProducts = getLocalData();
         if (!localProducts) {
+
             // Load products using API if not having local product store or local product store gets empty
             const response = await fetchProduct();
             setLocalData(response, []);
             return response;
-            
+
         } else {
-            return getLocalData().products;
+            return localProducts.products
         }
     }
 )

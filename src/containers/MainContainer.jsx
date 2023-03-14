@@ -21,7 +21,7 @@ const MainContainer = () => {
         dispatch(fetchProductsAsync());
         setTimeout(() => {
             dispatch(loadingFalse());
-        }, 1000);
+        }, 2000);
     }, [])
 
     // "https://my-json-server.typicode.com/9Yogesh9/ecommerce/cart" to get the list of items

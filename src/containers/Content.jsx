@@ -31,10 +31,10 @@ const Content = () => {
 
     // Clearing states of redux and fetching data from API
     const RestoreApp = () => {
+        localStorage.clear();
         dispatch(emptyState());
         dispatch(emptyCart());
         dispatch(loadingTrue());
-        localStorage.clear();
 
         Notify("Replenishing the Store. Please wait !", true);
 

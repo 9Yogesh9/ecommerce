@@ -3,8 +3,6 @@ export function getLocalData() {
 }
 
 export function setLocalData(products, cart) {
-    // console.log("Getting cart ");
-    // console.log(cart);
     const ecom = {
         products,
         cart
@@ -42,7 +40,6 @@ export function subtractFromCart(item) {
     if (cart.length === 0) return cart;
 
     const exists = cart.map(e => e.id).indexOf(item.id);
-    // console.log("Stock : ", cart[exists]?.stock - 1);
     if (cart[exists].stock - 1 === 0) {
         cart[exists].stock -= 1;
 
