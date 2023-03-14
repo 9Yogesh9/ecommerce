@@ -84,8 +84,8 @@ const ProductDetails = () => {
                     <div className="details_information">
 
                         <div className='details_headers'>
-                            <div id="details_name"><h1>{product.name}</h1></div>
-                            <div><h1> &#x20B9; {product.price}</h1></div>
+                            <div id="details_nameH1"><h1>{product.name}</h1></div>
+                            <div id="details_nameH2"><h1> &#x20B9; {product.price}</h1></div>
                         </div>
 
                         <div style={{ marginLeft: "3rem" }}>{product.stock ? <>In Stocks : {product.stock}</> : "Out of stock !"} </div>
